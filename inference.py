@@ -35,7 +35,8 @@ y = slope*x + intercept
 
 fig = plt.figure(figsize=(6,6))
 
-plt.plot(x, y, 'r', label='Regression Line',color=[172.0/255, 77/255.0, 47/255.0])
+# plt.plot(x, y, 'r', label='Regression Line',color=[172.0/255, 77/255.0, 47/255.0])
+plt.plot(x, y, 'r', label='Regression Line',color=[214.0/255, 164/255.0, 62/255.0])
 plt.plot(x, x, 'black', linestyle='dashed', label='Prediction = GroundTruth')
 plt.scatter(gt, pred, label='data', facecolors='none', edgecolors='black')
 plt.xlabel('Ground Truth')
