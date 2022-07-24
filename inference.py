@@ -18,7 +18,7 @@ np.random.seed(seed_val)
 random.seed(seed_val)
 
 
-exp_name = "Ash"
+exp_name = "YellowPoplar"
 data_split = 'test' #"train" #or 'test'
 
 train_loader, test_loader, [sc, sct] = train_test_loader(exp_name)

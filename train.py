@@ -23,7 +23,7 @@ random.seed(seed_val)
 learning_rate = 1e-3
 num_epochs = 200
 
-exp_name = "Oak"
+exp_name = "YellowPoplar"
 train_loader, test_loader, [sc, sct] = train_test_loader(exp_name)
 model = ANN_model()
 
