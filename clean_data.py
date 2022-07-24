@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import glob
 
-file_errors_location = 'Data4Dipesh/Ash/Ash_Front.xlsx'
+exp_name = "YellowPoplar"
+file_errors_location = f'Data4Dipesh/{exp_name}/{exp_name}_Front.xlsx'
 df_init = pd.read_excel(file_errors_location)
 temps = [225, 250, 275, 300, 325]
 times = [10, 20, 30, 40, 50]
@@ -40,7 +41,7 @@ for temp in temps:
         # print(f"after shape: {df.shape}")
         clean_data = pd.concat([clean_data, df], axis=0)
 
-clean_data.to_csv('Data4Dipesh/Ash/Ash_Front_Clean.csv')
+clean_data.to_csv(f'Data4Dipesh/{exp_name}/{exp_name}_Front_Clean.csv')
 
 # first_few = 72
 
