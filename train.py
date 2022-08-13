@@ -20,10 +20,10 @@ torch.manual_seed(seed_val)
 np.random.seed(seed_val)
 random.seed(seed_val)
 
-learning_rate = 1e-3
-num_epochs = 500
+learning_rate = 1e-4
+num_epochs = 900
 
-exp_name = "YellowPoplar"
+exp_name = "Oak"
 train_loader, test_loader, [sc, sct] = train_test_loader(exp_name)
 model = ANN_model()
 
@@ -54,9 +54,9 @@ for epoch in range(num_epochs):
     mape_l.append(all_loss[2])
     r2_l.append(all_loss[3])
     
-torch.save(model.state_dict(), f"{exp_name}_model.pt")
-joblib.dump(sc, "scaler_train.save") 
-joblib.dump(sct, "scaler_test.save") 
+# torch.save(model.state_dict(), f"{exp_name}_model.pt")
+# joblib.dump(sc, "scaler_train.save") 
+# joblib.dump(sct, "scaler_test.save") 
 
 # plot 4 plots in one graph
 fig, ax = plt.subplots(2, 2, figsize=(10,10))
@@ -68,6 +68,6 @@ ax[1, 0].plot(mape_l)
 ax[1, 0].set_title('MAPE')
 ax[1, 1].plot(r2_l)
 ax[1, 1].set_title('R2')
-plt.savefig('loss_func.png')
+# plt.savefig('loss_func.png')
 # plt.show()
 

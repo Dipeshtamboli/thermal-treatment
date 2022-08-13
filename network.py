@@ -5,9 +5,9 @@ import torch.nn.functional as F
 class ANN_model(torch.nn.Module):
     def __init__(self):
         super(ANN_model, self).__init__()
-        self.linear1 = torch.nn.Linear(5, 10)  
+        self.linear1 = torch.nn.Linear(5, 12)  
         # self.linear2 = torch.nn.Linear(15, 10)  
-        self.linear2 = torch.nn.Linear(10, 1)  
+        self.linear2 = torch.nn.Linear(12, 1)  
 
     def forward(self, x):
         x = self.linear1(x)
