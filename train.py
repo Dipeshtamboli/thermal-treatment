@@ -21,7 +21,7 @@ np.random.seed(seed_val)
 random.seed(seed_val)
 
 learning_rate = 1e-3
-num_epochs = 200
+num_epochs = 500
 
 exp_name = "YellowPoplar"
 train_loader, test_loader, [sc, sct] = train_test_loader(exp_name)
@@ -45,8 +45,10 @@ for epoch in range(num_epochs):
         if i % 100 == 0:
             print(f'Epoch: {epoch+1}, train loss: {loss.item()}')
     all_loss, gt, pred = validate(model, test_loader, sct)
+    train_loss, train_gt, train_pred = validate(model, train_loader, sct)
     # print(f"test loss: {all_loss}")
-    print(f"mse_l: {all_loss[0].item()}, rmse_l: {all_loss[1].item()}, mape_l: {all_loss[2].item()}, r2_l: {all_loss[3].item()}")
+    print(f"TRAIN: mse_l: {train_loss[0].item()}, rmse_l: {train_loss[1].item()}, mape_l: {train_loss[2].item()}, r2_l: {train_loss[3].item()}")
+    print(f"TEST : mse_l: {all_loss[0].item()}, rmse_l: {all_loss[1].item()}, mape_l: {all_loss[2].item()}, r2_l: {all_loss[3].item()}")
     mse_l.append(all_loss[0])
     rmse_l.append(all_loss[1])
     mape_l.append(all_loss[2])
