@@ -27,3 +27,9 @@ Run `python3 train.py` & `network.py` modify the model:
 **`12`** here: still *hidden layer number*
 **`1`** mean *the output number*
 
+# GitHub
+Sync local repository with web: `git pull`   
+To check the changes: `git status`   
+Add the commits： `git add .` (. means all)   
+Commit tag: `git commit -m "<put the tag here>"`   
+push to Gihub: `git push`
