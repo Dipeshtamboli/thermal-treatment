@@ -18,7 +18,7 @@ np.random.seed(seed_val)
 random.seed(seed_val)
 
 
-exp_name = "YellowPoplar"
+exp_name = "Oak"
 data_split = 'test' #"train" #or 'test'
 
 train_loader, test_loader, [sc, sct] = train_test_loader(exp_name)
@@ -46,7 +46,7 @@ y = slope*x + intercept
 
 fig = plt.figure(figsize=(6,6))
 
-plt.plot(x, y, 'r', label='Regression Line',color=[172.0/255, 77/255.0, 47/255.0])
+plt.plot(x, y, 'r', label='Regression Line',color=[255/255, 128/255.0, 0/255.0])
 # plt.plot(x, y, 'r', label='Regression Line',color=[214.0/255, 164/255.0, 62/255.0])
 plt.plot(x, x, 'black', linestyle='dashed', label='Prediction = GroundTruth')
 plt.scatter(gt, pred, label='data', facecolors='none', edgecolors='black')

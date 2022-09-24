@@ -23,13 +23,13 @@ torch.manual_seed(seed_val)
 np.random.seed(seed_val)
 random.seed(seed_val)
 
-exp_name = "oak"
+exp_name = "yellowpoplar"
 
 model = ANN_model()
 model.load_state_dict(torch.load(f"{exp_name}_model.pt"))
 model.eval()
 
-temp, L_before, a_before, b_before, delta_e =  325, 71.1, 6.5, 22.2, 44.15
+temp, L_before, a_before, b_before, delta_e =  300, 83.33, 0.93, 15.46, 40.58
 time_range = np.arange(0, 100, 10) # in seconds
 X = np.zeros((len(time_range), 5))
 

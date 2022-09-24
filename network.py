@@ -22,6 +22,6 @@ if "__main__" == __name__:
     model = ANN_model()
     print(model)
     input = torch.FloatTensor(10, 5)
-    model.load_state_dict(torch.load("ash_model.pt"))
+    # model.load_state_dict(torch.load("ash_model.pt"))
     model.eval()
     print(model(input).shape)    
